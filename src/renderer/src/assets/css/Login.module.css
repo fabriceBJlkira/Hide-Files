@@ -1,0 +1,7 @@
+.bg{
+  background: url('../images/bg.jpg') no-repeat center/cover;
+
+}
+.transparent{
+  background: rgba(0, 0, 0, 0.600)!important;
+}
