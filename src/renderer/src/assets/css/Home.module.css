@@ -1,0 +1,16 @@
+.topAdd{
+  padding: 1% 2%;
+}
+.block{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.blockInner{
+  border: solid 1px white;
+  padding: 3% 4%;
+  border-radius: 10px;
+  cursor: pointer;
+  /* background-color: white; */
+  color: white;
+}

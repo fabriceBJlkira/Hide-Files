@@ -1,0 +1,27 @@
+.container{
+  max-height: 100vh;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding-top: 20px;
+  overflow-y: auto; /* Optional: Add scroll if the content overflows */
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.content {
+  margin-left: 25%; /* Adjust based on the sidebar width */
+  padding: 20px;
+}
+.link{
+  color: white;
+}
+.link:hover{
+  color: rgb(197, 197, 197);
+}
