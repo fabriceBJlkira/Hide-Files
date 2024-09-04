@@ -1,12 +1,21 @@
 import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, Navigate } from 'react-router-dom';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import classe from '../assets/css/DefaultLayout.module.css';
+import {useAuthContext} from '../contexts/AuthContext';
 
 const DefaultLayout = () => {
 
+  const {token} = useAuthContext();
+
+  if (!token) {
+    return <Navigate to={'/login'}/>
+  }
   const exit = () => {
-    window.close();
+    localStorage.removeItem('ACCESS_TOKEN');
+    if (!localStorage.getItem('ACCESS_TOKEN')) {
+      window.close();
+    }
   };
 
   return (
