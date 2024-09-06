@@ -4,6 +4,7 @@ import LoginLayout from "../layouts/LoginLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Home from "../pages/Home";
+import UploadVideo from "../pages/UploadVideo";
 
 const Router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const Router = createBrowserRouter([
     {
         path: '/home',
         element: <Home />
+    },
+    {
+        path: '/upload/video',
+        element: <UploadVideo />
     },
     ]
   },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Navigate } from 'react-router-dom';
 import {useAuthContext} from '../contexts/AuthContext';
 
 const LoginLayout = () => {

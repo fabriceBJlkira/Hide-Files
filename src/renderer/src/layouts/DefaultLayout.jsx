@@ -23,8 +23,9 @@ const DefaultLayout = () => {
       <Row>
         <Col xs={3} className={classe.sidebar}>
           <Nav className="flex-column">
-            <Nav.Link as={Link} to={"#"} className={classe.link} >Video</Nav.Link>
+            <Nav.Link as={Link} to={"/"} className={classe.link} >Video</Nav.Link>
             <Nav.Link as={Link} to={"#"} className={classe.link}>Photos</Nav.Link>
+            <Nav.Link as={Link} to={"upload/video"} className={classe.link}>Upload</Nav.Link>
             <Nav.Link as={Link} to={"#"} className={classe.link}>Settings</Nav.Link>
             <Nav.Link as={Link} to={"#"} className={classe.link} onClick={exit}>exit App</Nav.Link>
           </Nav>

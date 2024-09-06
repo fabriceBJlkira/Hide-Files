@@ -31,15 +31,7 @@ AxiosClient.interceptors.response.use( (response) => {
 
     const {response} = error;
 
-    // if (response.status === 401) {
-    //     localStorage.removeItem('ACCESS_TOKEN');
-    // }
-    // if (response.status === 422) {
-    //     return response
-    // }
-    // if (response.status === 401 || response.status === 400) {
-    //     return response
-    // }
+    return response
 });
 
 export default AxiosClient;

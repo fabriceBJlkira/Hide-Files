@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card, InputGroup  } from 'react-bootstrap';
 import { FaUserPlus, FaUser, FaEnvelope, FaLock, FaLockOpen } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import classe from '../assets/css/Login.module.css';
 import AxiosClient from '../api/AxiosClient';
 
@@ -33,6 +33,8 @@ const Register = () => {
       [name]: value,
     });
   };
+
+  const navigate = useNavigate(); // Hook from react-router-dom
 
   /**
    * ours validation
@@ -82,7 +84,11 @@ const Register = () => {
     if (Object.keys(formErrors).length === 0) {
       console.log("Form submitted successfully:", formData);
       const response = AxiosClient.post('insertUser.php', formData);
-      console.log(response);
+      response.then((res)=> {
+        if (res.status === 200) {
+          navigate('/login');
+        }
+      });
     } else {
       setErrors(formErrors);
     }
