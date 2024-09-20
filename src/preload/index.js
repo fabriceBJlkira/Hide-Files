@@ -11,6 +11,9 @@ if (process.contextIsolated) {
   try {
     contextBridge.exposeInMainWorld('electron', electronAPI)
     contextBridge.exposeInMainWorld('api', api)
+    contextBridge.exposeInMainWorld('testManathan', {
+      desc: () => 'test de la materniter de la band d\'idio hahaha'
+    })
   } catch (error) {
     console.error(error)
   }
